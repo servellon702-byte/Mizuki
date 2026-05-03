@@ -148,7 +148,7 @@ export const siteConfig: SiteConfig = {
 		waves: {
 			enable: true, // 是否启用水波纹效果（注意：此功能性能开销较大）
 			performanceMode: false, // 性能模式：减少动画复杂度(性能提升40%)
-			mobileDisable: false, // 移动端禁用
+			mobileDisable: false, // 在移动端禁用水波纹效果
 		},
 
 		// PicFlow API支持(智能图片API)
@@ -638,7 +638,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 };
 
 export const sakuraConfig: SakuraConfig = {
-	enable: true, // 默认关闭樱花特效
+	enable: true, // 启用樱花特效
 	sakuraNum: 21, // 樱花数量
 	limitTimes: -1, // 樱花越界限制次数，-1为无限循环
 	size: {
@@ -666,7 +666,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: true, // 禁用看板娘以提升性能
+	enable: true, // 启用看板娘
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 模型位置
 	width: 280, // 默认宽度
@@ -715,3 +715,12 @@ export const widgetConfigs = {
 } as const;
 
 // umamiConfig相关配置已移动至astro.config.mjs中,统计脚本请自行在Layout.astro文件的<head>中插入
+
+// 配置验证 - 确保关键值的有效性
+if (!siteConfig.siteURL.endsWith('/')) {
+	console.warn('Warning: siteConfig.siteURL should end with a trailing slash');
+}
+
+if (siteConfig.timeZone < -12 || siteConfig.timeZone > 12) {
+	console.error('Error: siteConfig.timeZone must be between -12 and 12');
+}
