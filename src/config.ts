@@ -26,7 +26,7 @@ const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UT
 export const siteConfig: SiteConfig = {
 	title: "Mizuki",
 	subtitle: "One demo website",
-	siteURL: "https://mizuki.mysqil.com/", // 请替换为你的站点URL，以斜杠结尾
+	siteURL: "https://1714520.xyz/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
@@ -74,8 +74,8 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bilibili: {
-		vmid: "your-bilibili-vmid", // 在此处设置你的Bilibili用户ID (uid)，例如 "1129280784"
-		fetchOnDev: false, // 是否在开发环境下获取 Bilibili 数据（默认 false）
+		vmid: "646095305", // 在此处设置你的Bilibili用户ID (uid)，例如 "1129280784"
+		fetchOnDev: true, // 是否在开发环境下获取 Bilibili 数据（默认 false）
 		coverMirror: "", // 封面图片镜像源（可选，如果需要使用镜像源，例如 "https://images.weserv.nl/?url="）
 		useWebp: true, // 是否使用WebP格式（默认 true）
 
@@ -129,19 +129,19 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/2.webp",
 				"/assets/desktop-banner/3.webp",
 				"/assets/desktop-banner/4.webp",
-			], // 桌面横幅图片
+			]， // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/1.webp",
-				"/assets/mobile-banner/2.webp",
+				"/assets/mobile-banner/2.webp"，
 				"/assets/mobile-banner/3.webp",
 				"/assets/mobile-banner/4.webp",
-			], // 移动横幅图片
+			]， // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
 
 		carousel: {
-			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
+			enable: true， // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 			interval: 3, // 轮播间隔时间（秒）
 		},
 
@@ -154,7 +154,7 @@ export const siteConfig: SiteConfig = {
 		// PicFlow API支持(智能图片API)
 		imageApi: {
 			enable: false, // 启用图片API
-			url: "http://domain.com/api_v2.php?format=text&count=4", // API地址，返回每行一个图片链接的文本
+			url: "http://domain.com/api_v2.php?format=text&count=4"， // API地址，返回每行一个图片链接的文本
 		},
 		// 这里需要使用PicFlow API的Text返回类型,所以我们需要format=text参数
 		// 项目地址:https://github.com/matsuzaka-yuki/PicFlow-API
@@ -178,7 +178,7 @@ export const siteConfig: SiteConfig = {
 				deleteSpeed: 50, // 删除速度（毫秒）
 				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 			},
-		},
+		}，
 
 		credit: {
 			enable: false, // 显示横幅图片来源文本
@@ -189,7 +189,7 @@ export const siteConfig: SiteConfig = {
 
 		navbar: {
 			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
-		},
+		}，
 	},
 	toc: {
 		enable: true, // 总开关，启用目录功能
@@ -247,7 +247,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 		desktop: [
 			"/assets/desktop-banner/1.webp",
 			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
+			"/assets/desktop-banner/3.webp"，
 			"/assets/desktop-banner/4.webp",
 		], // 桌面横幅图片
 		mobile: [
@@ -532,7 +532,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			class: "onload-animation",
 			// 动画延迟时间
 			animationDelay: 50,
-		},
+		}，
 		{
 			// 组件类型：侧栏音乐组件
 			type: "music-sidebar",
@@ -640,7 +640,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 };
 
 export const sakuraConfig: SakuraConfig = {
-	enable: false, // 默认关闭樱花特效
+	enable: true, // 默认关闭樱花特效
 	sakuraNum: 21, // 樱花数量
 	limitTimes: -1, // 樱花越界限制次数，-1为无限循环
 	size: {
@@ -668,7 +668,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: false, // 禁用看板娘以提升性能
+	enable: true, // 禁用看板娘以提升性能
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 模型位置
 	width: 280, // 默认宽度
